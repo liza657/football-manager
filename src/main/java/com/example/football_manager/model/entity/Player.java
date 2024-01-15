@@ -36,13 +36,6 @@ public class Player {
     @Column(name = "`birthday`")
     private LocalDate birthday;
 
-    private Boolean isExpired;
-
-    private Boolean isLocked;
-
-    private Boolean isCredentialsExpired;
-
-    private Boolean isEnabled;
 
     @ManyToOne(cascade = CascadeType.ALL, optional = false)
     @JoinColumn(name = "team_id", referencedColumnName = "id", nullable = false)
